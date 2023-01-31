@@ -18,7 +18,11 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
-
+  
+  # GET /users/1/edit_name
+  def edit_name
+  end
+  
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
