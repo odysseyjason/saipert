@@ -4,6 +4,6 @@
     <%= user.name %>
   </p>
   <%= turbo_frame_tag :user_name do %>
-    Name: <%= link_to @user.name, edit_name_user_path(@user) %>
+    Name: <%= link_to user.name, edit_name_user_path(user) %>
   <% end %>
 </div>
