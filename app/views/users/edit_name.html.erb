@@ -1,5 +1,6 @@
 <%= turbo_frame_tag :user_name do %>
-    <%= form_with model: @user, url: user_path(@user) do |form| %>
+    <%= form_with(model: @user) do |form| %>
+    
       <%= form.text_field :name %>
       <%= form.submit "Save" %>
     <% end %>
