@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit_name
   def edit_name
   end
-  
+
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
@@ -69,6 +69,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name)
+      params.require(:user).permit(:name, :user, :id)
     end
 end

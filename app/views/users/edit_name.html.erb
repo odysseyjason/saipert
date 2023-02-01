@@ -1,7 +1,8 @@
 <%= turbo_frame_tag :user_name do %>
-    <%= form_with(model: @user) do |form| %>
-    
+    <%= form_with(model: @user, url: user_path) do |form| %>
+        <input type="hidden" name="_method" value="patch" autocomplete="off">  
       <%= form.text_field :name %>
+      <%= form.text_field :user %>
       <%= form.submit "Save" %>
     <% end %>
   <% end %>

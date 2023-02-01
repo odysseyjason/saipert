@@ -4,9 +4,19 @@ This was made for Ruby Version 3.2.0 and Rails 7.0.4
 
 Steps used:
 
-git init saipert rails new saipert --css bootstrap --database=postgresql cd saipert rake db:setup git add . git commit -m "initial commit of new Rails 7.0.4.2, Ruby 3.2.0 app" rails generate scaffold User name:string rails db:migrate git add . git commit -m "generated scaffold files for User name:string"
+git init saipert rails new saipert --css bootstrap --database=postgresql 
+cd saipert 
+rake db:setup 
+git add . 
+git commit -m "initial commit of new Rails 7.0.4.2, Ruby 3.2.0 app" 
+rails generate scaffold User name:string 
+rails db:migrate 
+git add . 
+git commit -m "generated scaffold files for User name:string"
 
-##MADE ALL CHANGES FROM https://nts.strzibny.name/single-attribute-in-place-editing-turbo/ git commit -m "made changes from https://nts.strzibny.name/single-attribute-in-place-editing-turbo/ to enable in place editing of User name"
+##MADE ALL CHANGES FROM https://nts.strzibny.name/single-attribute-in-place-editing-turbo/ 
+
+git commit -m "made changes from https://nts.strzibny.name/single-attribute-in-place-editing-turbo/ to enable in place editing of User name"
 
 bin/dev produces this error:
 
@@ -21,7 +31,9 @@ undefined method `name' for nil:NilClass Extracted source (around line #7): 5
 #DEBUGGING I EDIT _user.html.erb
 
 changed line <%= link_to @user.name, edit_name_user_path(@user) %> TO: <%= link_to user.name, edit_name_user_path(user) %>
-git add . odyex@DESKTOP-JASON:~/saipert$ git commit -m "Changed _user.html.erb LINE WITH: <%= link_to @user.name, edit_name_user_path(@user) %> TO: <%= link_to user.name, edit_name_user_path(user) %>"
+
+git add . odyex@DESKTOP-JASON:~/saipert$ 
+git commit -m "Changed _user.html.erb LINE WITH: <%= link_to @user.name, edit_name_user_path(@user) %> TO: <%= link_to user.name, edit_name_user_path(user) %>"
 
 bin/dev #now the error is
 
